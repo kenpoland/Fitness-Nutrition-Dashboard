@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitness & Nutrition Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>💪 Personal Fitness & Nutrition Tracker</h1>
+
+  <!-- 🥗 Meal Logger -->
+  <section>
+    <h2>Log Meal</h2>
+    <input type="date" id="mealDate">
+    <input type="text" id="mealType" placeholder="Meal Type (e.g., Lunch)">
+    <input type="text" id="foodItem" placeholder="Food Name">
+    <input type="text" id="quantity" placeholder="Quantity (e.g., 150g)">
+    <input type="number" id="protein" placeholder="Protein (g)">
+    <input type="number" id="fat" placeholder="Fat (g)">
+    <input type="number" id="carbs" placeholder="Carbs (g)">
+    <button onclick="submitMeal()">Submit Meal</button>
+  </section>
+
+  <!-- 🏋️ Exercise Logger -->
+  <section>
+    <h2>Log Exercise</h2>
+    <input type="date" id="exerciseDate">
+    <input type="text" id="exerciseName" placeholder="Exercise (e.g., Squat)">
+    <input type="number" id="reps" placeholder="Reps">
+    <input type="number" id="sets" placeholder="Sets">
+    <input type="text" id="weight" placeholder="Weight Used">
+    <input type="number" id="duration" placeholder="Duration (minutes)">
+    <button onclick="submitExercise()">Submit Exercise</button>
+  </section>
+
+  <!-- ⚖️ Body Metrics Logger -->
+  <section>
+    <h2>Log Body Metrics</h2>
+    <input type="date" id="metricsDate">
+    <input type="number" id="weight" placeholder="Weight (kg)">
+    <input type="number" id="bodyFat" placeholder="Body Fat (%)">
+    <input type="number" id="muscleMass" placeholder="Muscle Mass (kg)">
+    <input type="text" id="waist" placeholder="Waist (in)">
+    <input type="text" id="chest" placeholder="Chest (in)">
+    <input type="text" id="thigh" placeholder="Thigh (in)">
+    <button onclick="submitBodyMetrics()">Submit Body Metrics</button>
+  </section>
+
+  <!-- 📊 Charts -->
+  <h2>Nutrient Progress</h2>
+  <canvas id="nutritionChart" width="400" height="200"></canvas>
+
+  <h2>Body Composition Over Time</h2>
+  <canvas id="bodyChart" width="400" height="200"></canvas>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
